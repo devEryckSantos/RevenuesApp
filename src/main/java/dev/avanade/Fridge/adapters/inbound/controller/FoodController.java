@@ -1,10 +1,9 @@
-package dev.avanade.Fridge.controller;
+package dev.avanade.Fridge.adapters.inbound.controller;
 
-import dev.avanade.Fridge.model.Food;
-import dev.avanade.Fridge.service.FoodService;
+import dev.avanade.Fridge.domain.model.Food;
+import dev.avanade.Fridge.application.service.FoodService;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.List;
 
 // Define essa classe como um RESTful Controller (Combinação de @Controller + @ResponseBody)

@@ -1,6 +1,6 @@
-package dev.avanade.Fridge.repository;
+package dev.avanade.Fridge.adapters.outbound.repository;
 
-import dev.avanade.Fridge.model.Food;
+import dev.avanade.Fridge.domain.model.Food;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /*

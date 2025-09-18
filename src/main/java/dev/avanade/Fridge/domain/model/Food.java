@@ -1,4 +1,4 @@
-package dev.avanade.Fridge.model;
+package dev.avanade.Fridge.domain.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

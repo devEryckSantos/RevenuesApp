@@ -1,7 +1,7 @@
-package dev.avanade.Fridge.service;
+package dev.avanade.Fridge.application.service;
 
-import dev.avanade.Fridge.model.Food;
-import dev.avanade.Fridge.repository.FoodRepository;
+import dev.avanade.Fridge.domain.model.Food;
+import dev.avanade.Fridge.adapters.outbound.repository.FoodRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
