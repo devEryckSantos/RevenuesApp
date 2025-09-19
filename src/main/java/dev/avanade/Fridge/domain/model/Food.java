@@ -1,19 +1,57 @@
 package dev.avanade.Fridge.domain.model;
 
-import jakarta.persistence.*;
-import lombok.Data;
+
 
 import java.time.LocalDate;
 
-@Entity // annotation obrigatória, diz ao JPA: "Essa classe deve ser mapeada como uma tabela no banco."
-@Table(name = "food_table") // annotation opcional, usada para customizar o mapeamento da tabela (name, schema, catalog, uniqueConstraints)
-@Data
+
+
 public class Food {
 
-    @Id // define o atributo abaixo como chave primária da tabela, porém o valor é atribuido manualmente.
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Define uma estratégia para geração automática do ID, IDENTITY = auto-incremento
-    private Long Id;
+    private Long id;
     private String name;
     private Integer quantity;
     private LocalDate expirationDate;
+
+    public Food() {}
+
+    public Food(Long id, String name, Integer quantity, LocalDate expirationDate) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+        this.expirationDate = expirationDate;
+    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public LocalDate getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(LocalDate expirationDate) {
+        this.expirationDate = expirationDate;
+    }
 }

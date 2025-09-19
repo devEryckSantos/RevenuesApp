@@ -1,7 +1,8 @@
 package dev.avanade.Fridge.application.service;
 
+import dev.avanade.Fridge.adapters.outbound.entities.JpaFoodEntity;
 import dev.avanade.Fridge.domain.model.Food;
-import dev.avanade.Fridge.adapters.outbound.repository.FoodRepository;
+import dev.avanade.Fridge.adapters.outbound.repository.JpaFoodRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,15 +10,15 @@ import java.util.List;
 @Service
 public class FoodService {
 
-    private final FoodRepository foodRepository;
+    private final JpaFoodRepository jpaFoodRepository;
 
-    public FoodService(FoodRepository foodRepository) {
-        this.foodRepository = foodRepository;
+    public FoodService(JpaFoodRepository jpaFoodRepository) {
+        this.jpaFoodRepository = jpaFoodRepository;
     }
 
-    public List<Food> getAll() { return foodRepository.findAll(); }
+    public List<JpaFoodEntity> getAll() { return jpaFoodRepository.findAll(); }
 
-    public Food save(Food food) {return foodRepository.save(food);}
+    public JpaFoodEntity save(JpaFoodEntity foodEntity) {return jpaFoodRepository.save(foodEntity);}
 
-    public void deleteById(Long id) { foodRepository.deleteById(id);}
+    public void deleteById(Long id) { jpaFoodRepository.deleteById(id);}
 }

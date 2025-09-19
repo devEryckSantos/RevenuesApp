@@ -1,6 +1,6 @@
 package dev.avanade.Fridge.adapters.outbound.repository;
 
-import dev.avanade.Fridge.domain.model.Food;
+import dev.avanade.Fridge.adapters.outbound.entities.JpaFoodEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /*
@@ -18,5 +18,5 @@ Porque o Spring Data JPA gera automaticamente os métodos de CRUD com base nesse
     - Qual entidade ele está a manipular (T)
     - Qual é o tipo da chave primária para métodos como findById(ID id), deleteById(ID id), etc.
  */
-public interface FoodRepository extends JpaRepository<Food, Long> {
+public interface JpaFoodRepository extends JpaRepository<JpaFoodEntity, Long> {
 }

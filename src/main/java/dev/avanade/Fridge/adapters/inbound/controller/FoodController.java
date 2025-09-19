@@ -1,5 +1,6 @@
 package dev.avanade.Fridge.adapters.inbound.controller;
 
+import dev.avanade.Fridge.adapters.outbound.entities.JpaFoodEntity;
 import dev.avanade.Fridge.domain.model.Food;
 import dev.avanade.Fridge.application.service.FoodService;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class FoodController {
     }
 
     @GetMapping
-    public List<Food> getAll() { return foodService.getAll(); }
+    public List<JpaFoodEntity> getAll() { return foodService.getAll(); }
 
     @PostMapping
     /*
@@ -32,7 +33,7 @@ public class FoodController {
      Não precisamos passar cada atributo separadamente para criar uma entidade Food. O Spring faz esse trabalho por
      nós. Basta que passemos a própria classe no paramêtro.
     */
-    public Food create(@RequestBody Food food) { return foodService.save(food); }
+    public JpaFoodEntity create(@RequestBody JpaFoodEntity foodEntity) { return foodService.save(foodEntity); }
 
     /*
      A anotação @PathVariable é usada para extrair valores diretamente da URL e vinculá-los a parâmetros da função
